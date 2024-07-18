@@ -220,6 +220,13 @@ The team's goal is to enhance patient monitoring by detecting outlier movements 
 - Joao Alves
   - [LinkedIn](www.linkedin.com/in/joão-alves-0a7110240)
   - Email: [joao.p.alves.2012@gmail.com](mailto:joao.p.alves.2012@gmail.com)
+ 
+- Joao Alves
+  - [LinkedIn]( https://www.linkedin.com/in/joão-pereira-040b3a212/)
+  - Email: [joao.pereira197606@gmail.com](mailto:joao.pereira197606@gmail.com)
+
+
+    
 
 
 
