@@ -217,6 +217,9 @@ The team's goal is to enhance patient monitoring by detecting outlier movements 
   - [LinkedIn](https://www.linkedin.com/in/hugo-ferreira-bab142206/)
   - Email: [hugo.dn.ferreira@gmail.com](mailto:hugo.dn.ferreira@gmail.com)
 
+- João Alves
+  - [LinkedIn](www.linkedin.com/in/joão-alves-0a7110240)
+  - Email: [joao.p.alves.2012@gmail.com] (mailto:joao.p.alves.2012@gmail.com)
 
 
 
