@@ -236,7 +236,7 @@ Future<void> loadConfig() async {
   String configString = await rootBundle.loadString('assets/config.json');
   Map<String, dynamic> dic = jsonDecode(configString);
   prefs.setString("ip_mqtt", dic["MQTT"]["ip"]);
-  prefs.setString("port_mqtt", dic["MQTT"]["port"]);
+  prefs.setInt("port_mqtt", int.parse(dic["MQTT"]["port"]));
   prefs.setString("ip_http", dic["HTTP"]["ip"]);
-  prefs.setString("port_http", dic["HTTP"]["port"]);
+  prefs.setInt("port_http", int.parse(dic["HTTP"]["port"]));
 }
