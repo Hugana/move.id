@@ -14,7 +14,7 @@ class NotificationHistoryController extends GetxController {
   Future<List<dynamic>> getNotificationHistory() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
   String ip = prefs.getString("ip_http")??"";
-  String port = prefs.getString("ip_http")??"";
+  String port = prefs.getString("port_http")??"";
 
   String url = 'http://'+ip+':'+port+'/' + ApiUrls.getNotificationHistoryUrl;
     String email = prefs.getString("email").toString();

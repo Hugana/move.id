@@ -48,7 +48,7 @@ class HomeController extends GetxController{
   
   SharedPreferences prefs = await SharedPreferences.getInstance();
   String ip = prefs.getString("ip_http")??"";
-  String port = prefs.getString("ip_http")??"";
+  String port = prefs.getString("port_http")??"";
 
   String url = 'http://'+ip+':'+port+'/' + ApiUrls.addNotifierUrl;
 
@@ -102,7 +102,7 @@ void removeNotifierRequest(String deviceid, String idLocation, MqttServerClient 
   
   SharedPreferences prefs = await SharedPreferences.getInstance();
   String ip = prefs.getString("ip_http")??"";
-  String port = prefs.getString("ip_http")??"";
+  String port = prefs.getString("port_http")??"";
 
   String url = 'http://'+ip+':'+port+'/' + ApiUrls.removeNotifierUrl;
 
@@ -164,7 +164,7 @@ final List<String> dropdownOptions = [];
 Future<Map<String,String>>  getAllLocationsAndIds() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   String ip = prefs.getString("ip_http")??"";
-  String port = prefs.getString("ip_http")??"";
+  String port = prefs.getString("port_http")??"";
 
   String url = 'http://'+ip+':'+port+'/' + ApiUrls.locationGetterUrl; 
   
@@ -201,7 +201,7 @@ Future<Map<String,String>>  getAllLocationsAndIds() async {
 Future<Map<String,String>> getAllListeners( MqttServerClient client) async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   String ip = prefs.getString("ip_http")??"";
-  String port = prefs.getString("ip_http")??"";
+  String port = prefs.getString("port_http")??"";
 
   String url = 'http://'+ip+':'+port+'/' + ApiUrls.getListenersUrl; 
   

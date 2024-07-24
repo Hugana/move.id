@@ -29,11 +29,11 @@ void main() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   loadConfig();
   String broker = prefs.getString("ip_mqtt")??"";
-  int port = prefs.getInt("port_mqtt")??0;
+  String port = prefs.getString("port_mqtt")??"0";
   String clientId = prefs.getString("email") ?? "teste";
 
   client = MqttServerClient(broker, clientId);
-  client.port = port;
+  client.port = int.parse(port);
   client.secure = false;
 
   client.onConnected = () => onConnected(client);
@@ -236,7 +236,7 @@ Future<void> loadConfig() async {
   String configString = await rootBundle.loadString('assets/config.json');
   Map<String, dynamic> dic = jsonDecode(configString);
   prefs.setString("ip_mqtt", dic["MQTT"]["ip"]);
-  prefs.setInt("port_mqtt", int.parse(dic["MQTT"]["port"]));
+  prefs.setString("port_mqtt", dic["MQTT"]["port"]);
   prefs.setString("ip_http", dic["HTTP"]["ip"]);
-  prefs.setInt("port_http", int.parse(dic["HTTP"]["port"]));
+  prefs.setString("port_http", dic["HTTP"]["port"]);
 }
