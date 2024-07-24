@@ -105,6 +105,18 @@ sh
 python manage.py runserver
 ```
 
+To start running the sensor data classification, use the django console:
+```
+python manage.py shell
+
+from move_id_app.notifier import Notifier
+from move_id_app.preprocessing.preprocessing_1 import PreProcessing_v1
+preprocessing = PreProcessing_v1()
+notifier = Notifier(preprocessing, '(ip_mqtt)')
+
+notifier.run()
+```
+
 ## Features
 
 The "move.id - Outlier Detection in Human Activity Data" project includes several features to enhance patient monitoring and ensure timely alerts for potential issues detected through the analysis of sensor data:
@@ -216,6 +228,17 @@ The team's goal is to enhance patient monitoring by detecting outlier movements 
 - Hugo Ferreira 
   - [LinkedIn](https://www.linkedin.com/in/hugo-ferreira-bab142206/)
   - Email: [hugo.dn.ferreira@gmail.com](mailto:hugo.dn.ferreira@gmail.com)
+
+- Joao Alves
+  - [LinkedIn](www.linkedin.com/in/joão-alves-0a7110240)
+  - Email: [joao.p.alves.2012@gmail.com](mailto:joao.p.alves.2012@gmail.com)
+ 
+- Joao Alves
+  - [LinkedIn]( https://www.linkedin.com/in/joão-pereira-040b3a212/)
+  - Email: [joao.pereira197606@gmail.com](mailto:joao.pereira197606@gmail.com)
+
+
+    
 
 
 
