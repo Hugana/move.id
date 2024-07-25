@@ -98,8 +98,9 @@ class HomeScreen extends GetView<HomeController> {
                       onPressed: () {
                         String deviceid = controller.deviceIDTextEditingController.text;
                         String location = controller.selectedLocation!.value.toString();
+                        
                         if (deviceid.isNotEmpty) {
-                          controller.addNotifierRequest(idLocation_nameLocation[location]!, deviceid);
+                          controller.addNotifierRequest(location, deviceid);
                           controller.refreshData(client);
                         } else {
                           Fluttertoast.showToast(

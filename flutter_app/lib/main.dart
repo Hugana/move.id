@@ -26,8 +26,10 @@ void main() async {
 
   final MqttServerClient client;
 
+  await loadConfig();
+
   SharedPreferences prefs = await SharedPreferences.getInstance();
-  loadConfig();
+  
   String broker = prefs.getString("ip_mqtt")??"";
   String port = prefs.getString("port_mqtt")??"0";
   String clientId = prefs.getString("email") ?? "teste";

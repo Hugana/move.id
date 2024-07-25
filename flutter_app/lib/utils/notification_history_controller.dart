@@ -17,6 +17,9 @@ class NotificationHistoryController extends GetxController {
   String port = prefs.getString("port_http")??"";
 
   String url = 'http://'+ip+':'+port+'/' + ApiUrls.getNotificationHistoryUrl;
+
+  print(url);
+  
     String email = prefs.getString("email").toString();
     String? startHour = prefs.getString('startHour');
     String? endHour = prefs.getString('endHour');
@@ -60,10 +63,10 @@ class NotificationHistoryController extends GetxController {
     return [];
   }
 
-  void evaluateNotification(Map<String,String> infos, bool classification) async {
+  void evaluateNotification(Map<String,dynamic> infos, bool classification) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
   String ip = prefs.getString("ip_http")??"";
-  String port = prefs.getString("ip_http")??"";
+  String port = prefs.getString("port_http")??"";
 
   String url = 'http://'+ip+':'+port+'/' + ApiUrls.notificationHistoryUrl;
 

@@ -26,7 +26,7 @@ Future<Map<String, String>> registerRequest(TextEditingController fnameControlle
 
   SharedPreferences prefs = await SharedPreferences.getInstance();
   String ip = prefs.getString("ip_http")??"";
-  String port = prefs.getString("ip_http")??"";
+  String port = prefs.getString("port_http")??"";
 
   String url = 'http://'+ip+':'+port+'/' + ApiUrls.registerUrl;
   

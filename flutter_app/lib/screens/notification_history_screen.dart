@@ -80,13 +80,14 @@ class NotificationHistoryScreen extends GetView<NotificationHistoryController> {
                                     IconButton(
                                       icon: const Icon(Icons.check, color: Colors.green),
                                       onPressed: () {
-                                        controller.evaluateNotification(notification['id'], true);
+                                        
+                                        controller.evaluateNotification(notification, true);
                                       },
                                     ),
                                     IconButton(
                                       icon: const Icon(Icons.close, color: Colors.red),
                                       onPressed: () {
-                                        controller.evaluateNotification(notification['id'], false);
+                                        controller.evaluateNotification(notification, false);
                                       },
                                     ),
                                   ],

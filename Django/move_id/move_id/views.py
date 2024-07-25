@@ -69,6 +69,9 @@ class ListenersAPI(APIView):
     def post(self, request):
 
         data = json.loads(request.body)
+
+        print(data)
+
         email = data.get('email')
 
         print('email: ' + email)

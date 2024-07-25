@@ -23,7 +23,7 @@ Future<Map<String, String>> loginRequest(BuildContext context, emailController,T
   
   SharedPreferences prefs = await SharedPreferences.getInstance();
   String ip = prefs.getString("ip_http")??"";
-  String port = prefs.getString("ip_http")??"";
+  String port = prefs.getString("port_http")??"";
 
   String url = 'http://'+ip+':'+port+'/' + ApiUrls.loginUrl;
 
